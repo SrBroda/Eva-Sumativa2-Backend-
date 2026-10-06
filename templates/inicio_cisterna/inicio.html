@@ -1,0 +1,35 @@
+{% extends 'inicio_cisterna/base.html' %}
+{% load static %}
+
+{% block title %}{{ nombre }} | Inicio{% endblock %}
+
+{% block content %}
+<section class="py-5 hero-section">
+    <div class="container">
+        <div class="hero-card p-5 mb-5">
+            <p class="eyebrow">Evaluación Sumativa 2 Backend</p>
+            <h1 class="display-4 fw-bold mb-3">{{ nombre }}</h1>
+        </div>
+
+        <div class="mb-4">
+            <h2 class="fw-bold">Temas</h2>
+        </div>
+
+        <div class="row g-4">
+            {% for tema in temas %}
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="topic-icon-panel {% if tema.slug == 'tema-1' %}topic-icon-panel-games{% else %}topic-icon-panel-music{% endif %}" aria-hidden="true">
+                        <i class="bi {% if tema.slug == 'tema-1' %}bi-controller{% else %}bi-music-note-beamed{% endif %} topic-icon"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title">{{ tema.titulo }}</h3>
+                        <a href="{% url 'inicio_cisterna:tema_detalle' tema.slug %}" class="btn btn-primary mt-3">Ver detalle</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

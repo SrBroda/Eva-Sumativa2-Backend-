@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#eefdf5"/>
+  <rect x="60" y="80" width="680" height="340" rx="24" fill="#bbf7d0"/>
+  <circle cx="220" cy="220" r="90" fill="#ffffff" opacity="0.6"/>
+  <rect x="360" y="160" width="260" height="25" rx="12" fill="#166534" opacity="0.8"/>
+  <rect x="360" y="210" width="210" height="25" rx="12" fill="#4ade80" opacity="0.8"/>
+  <rect x="360" y="260" width="240" height="25" rx="12" fill="#86efac" opacity="0.8"/>
+  <text x="330" y="405" font-size="42" font-family="Arial" fill="#14532d" font-weight="700">Tema 2</text>
+</svg>

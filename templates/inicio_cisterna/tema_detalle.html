@@ -1,0 +1,40 @@
+{% extends 'inicio_cisterna/base.html' %}
+{% load static %}
+
+{% block title %}{{ tema.titulo }} | {{ apellido }}{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="mb-4">
+            <a href="{% url 'inicio_cisterna:inicio' %}" class="btn btn-outline-primary">Volver al inicio</a>
+        </div>
+
+        <header class="topic-detail-heading">
+            <span class="topic-detail-icon {% if tema.slug == 'tema-1' %}topic-icon-panel-games{% else %}topic-icon-panel-music{% endif %}" aria-hidden="true">
+                <i class="bi {% if tema.slug == 'tema-1' %}bi-controller{% else %}bi-music-note-beamed{% endif %}"></i>
+            </span>
+            <h1 class="fw-bold mb-0">{{ tema.titulo }}</h1>
+        </header>
+        <p class="lead text-muted topic-description">{{ tema.descripcion }}</p>
+
+        <div id="carouselTema" class="carousel slide carousel-fade shadow-sm rounded overflow-hidden mx-auto theme-gallery" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for imagen in tema.imagenes %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static imagen %}" class="d-block w-100 carousel-image" alt="{{ tema.titulo }} - imagen {{ forloop.counter }}">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTema" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTema" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}
