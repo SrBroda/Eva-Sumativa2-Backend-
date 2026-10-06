@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'evaluacion_sumativa_2_backend.urls'
+ROOT_URLCONF = 'cisterna.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'evaluacion_sumativa_2_backend.wsgi.application'
+WSGI_APPLICATION = 'cisterna.wsgi.application'
 
 
 # Database

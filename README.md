@@ -32,7 +32,7 @@ python manage.py test
 ```
 
 ## Estructura
-- `evaluacion_sumativa_2_backend/`: configuración del proyecto Django.
+- `cisterna/`: configuración del proyecto Django.
 - `inicio_cisterna/`: vistas, rutas y pruebas de la aplicación.
 - `templates/inicio_cisterna/`: templates compartidos, inicio y detalle de temas.
 - `static/inicio_cisterna/css/`: estilos propios.
